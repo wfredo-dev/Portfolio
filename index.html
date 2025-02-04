@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -17,6 +22,18 @@
           <li><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
+      <nav class="navbar-small">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger-btn" id="burger-btn">
+        <i id="burger-icon" class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <main class="main">
       <section class="home" id="#">
@@ -88,38 +105,41 @@
       </section>
       <section id="contacts">
         <div class="contacts">
-        <div class="contacts-left">
-          Feel free to get in touch! Whether you have questions, would like to
-          collaborate, or simply want to chat about a project, I’d love to hear
-          from you.
+          <div class="contacts-left">
+            Feel free to get in touch! Whether you have questions, would like to
+            collaborate, or simply want to chat about a project, I’d love to
+            hear from you.
+          </div>
+          <div class="contacts-right">
+            <h3>Contact Information</h3>
+            <p>Feel free to reach me at:</p>
+            <ul>
+              <li>
+                Email:
+                <a href="mailto:wfredo.dev@gmail.com">wfredo.dev@gmail.com</a>
+              </li>
+              <li>Phone: +639156472430</li>
+              <li>
+                Address: Tropical Village, San Francisco, General Trias City,
+                Cavite, 4107, Philippines
+              </li>
+              <li>
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  target="_blank"
+                  >linkedin.com/in/yourprofile</a
+                >
+              </li>
+              <li>
+                GitHub:
+                <a href="https://github.com/yourprofile" target="_blank"
+                  >github.com/yourprofile</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="contacts-right">
-          <h3>Contact Information</h3>
-          <p>Feel free to reach me at:</p>
-          <ul>
-            <li>
-              Email:
-              <a href="mailto:wfredo.dev@gmail.com">wfredo.dev@gmail.com</a>
-            </li>
-            <li>Phone: +639156472430</li>
-            <li>
-              Address: Tropical Village, San Francisco, General Trias City,
-              Cavite, 4107, Philippines
-            </li>
-            <li>
-              LinkedIn:
-              <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
-                >linkedin.com/in/yourprofile</a
-              >
-            </li>
-            <li>
-              GitHub:
-              <a href="https://github.com/yourprofile" target="_blank"
-                >github.com/yourprofile</a
-              >
-            </li>
-          </ul>
-        </div></div>
       </section>
     </main>
     <footer class="footer">
@@ -128,4 +148,16 @@
       </div>
     </footer>
   </body>
+  <!-- JavaScript for Toggle -->
+  <script>
+    const burgerBtn = document.getElementById("burger-btn");
+    const burgerIcon = document.getElementById("burger-icon");
+    const navMenu = document.getElementById("nav-menu");
+
+    burgerBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active"); // Toggle menu visibility
+      burgerIcon.classList.toggle("fa-bars");
+      burgerIcon.classList.toggle("fa-xmark"); // Change icon
+    });
+  </script>
 </html>
